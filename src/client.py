@@ -1,14 +1,16 @@
 import socket
 import threading
+import sys
 
 # HOST = "192.168.1.115"
 HOST = "127.0.0.1"
-PORT = 59000
+# PORT = 59000
+PORT = int(sys.argv[2])
 FORMAT = "utf-8"
 
 stop_thread = False
 
-nickname = input("Choose a nickname: ")
+nickname = sys.argv[1]
 if nickname == "admin":
     password = input("Enter password for admin: ")
 
